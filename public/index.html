@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vidly</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Vidly</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-reg" href="#">Register</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link nav-link-logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <div class="row">
+        <div class="col-3 mt-5 d-flex bbb">
+          <div class="nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+          </div>
+          <ul class="list-group menu-items">
+            <li class="list-group-item all">All Genres</li>
+            
+          </ul>
+        </div>
+        <div class="col mt-4">
+          <p>Showing <span class="count-movie">coutn-movie</span> movies in the database.</p>
+         <div class="flex">
+          <input
+          type="text"
+          name="query"
+          class="form-control my-3"
+          placeholder="Search..."
+          value=""
+        />
+        <button class="btn btn-danger">clear</button>
+         </div>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th class="clickable">Title <i class="fa fa-sort-asc"></i></th>
+                <th class="clickable">Genre</th>
+                <th class="clickable">Stock</th>
+                <th class="clickable">Rate</th>
+                <th class="clickable"></th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+              
+            </tbody>
+          </table>
+          <nav>
+            <ul class="pagination">
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <!-- Login -->
+
+    <form class="container w-50 login">
+      <!-- User Name input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="form2Example1" class="form-control" />
+        <label class="form-label logEmail" for="form2Example1">Email Address</label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="form2Example2" class="form-control" />
+        <label class="form-label logPassword" for="form2Example2">Password</label>
+      </div>
+
+      <!-- 2 column grid layout for inline styling -->
+      <div class="row mb-4">
+        <div class="col d-flex justify-content-center"></div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="button" class="btn btn-primary btn-block mb-4 sing-in">Sign in</button>
+    </form>
+
+    <!-- End Login -->
+
+    <!-- Register -->
+    <form class="container w-50 register">
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Username</label>
+        <input type="text" class="form-control regUserName" id="exampleInputUserName" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control regEmail"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control regPassword" id="exampleInputPassword1" />
+      </div>
+      <p class="p"></p>
+      <button type="submit" class="btn btn-primary submit">Submit</button>
+    </form>
+    <!-- End register -->
+  </body>
+</html>
