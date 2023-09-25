@@ -79,6 +79,8 @@ async function Main(){
             active.classList.remove("active");
 
             a.classList.add("active");
+
+            search.value = "";
         });
         return a;
     }

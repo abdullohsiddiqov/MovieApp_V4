@@ -147,3 +147,6 @@ body {
   align-items: center;
   justify-content: center;
 }
+.pagination{ 
+  cursor: pointer;
+}
