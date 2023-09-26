@@ -13,13 +13,13 @@ async function iniit() {
   };
 
   const newUser = await Auth.Register(fake);
-  // console.log('newUser = ', newUser);
+  console.log('newUser = ', newUser);
 
   const token = await Auth.Login({ email: fake.email, password: fake.password });
-  // console.log('token = ', token);
+  console.log('token = ', token);
 
   const user = await Auth.Me(token);
-  // console.log('user = ', user);
+  console.log('user = ', user);
 }
 
 iniit();

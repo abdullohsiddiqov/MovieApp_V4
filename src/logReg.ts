@@ -43,9 +43,7 @@ export async function logIn() {
 c.submit.addEventListener('click', submit);
 c.singIn.addEventListener('click', logIn);
 
-/**
- *
- */
+
 
 // export async function loginPage() {
 //   const token = await Auth.Login({
@@ -59,7 +57,3 @@ c.singIn.addEventListener('click', logIn);
 //   if (localStorage.getItem(tokenKey) != null)
 //     console.log('tokenkey', localStorage.getItem(tokenKey));
 // }
-
-/**
- *
- */

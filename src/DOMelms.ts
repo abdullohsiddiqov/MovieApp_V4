@@ -11,6 +11,7 @@ export const ul: HTMLOListElement = document.querySelector('.list-group');
 export const loginBtn: HTMLAreaElement = document.querySelector('.nav-link');
 export const registerBtn: HTMLAreaElement = document.querySelector('.nav-link-reg');
 export const navbar: HTMLDivElement = document.querySelector('.navbar');
+export const pagination = document.querySelector('.pagination') as HTMLDivElement;
 export const main: HTMLDivElement = document.querySelector('.container');
 export const login: HTMLFormElement = document.querySelector('.login');
 export const register: HTMLFormElement = document.querySelector('.register');
