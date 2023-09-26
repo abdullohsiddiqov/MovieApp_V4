@@ -1,6 +1,6 @@
 import * as d from './DOMelms';
-const search = document.querySelector(".form-control");
-let count_movie = document.querySelector(".count-movie");
+const search = document.querySelector(".form-control") as HTMLInputElement;
+let count_movie = document.querySelector(".count-movie") as HTMLElement;
 export async function GetData() {
     const response = await fetch('http://localhost:4000/api/movies');
     const movies = response.json();
@@ -10,18 +10,18 @@ async function Main(){
     const movie = await GetData();
     let currentPage = 1;
     let rows = 5;
-    function DisplayList(arrData , rowPerPage , page) { 
+    function DisplayList(arrData:any , rowPerPage:any , page:any) { 
         const postsElm = document.querySelector('.tbody');
         postsElm.innerHTML = '';
         page--;
 
-        const start = rowPerPage * page;
+        const start = rowPerPage * page;//rowperpage stranitsala 16 tan page turgan page
         const end = start + rowPerPage;
-        const paginatedData = arrData.slice(start, end);
+        const paginatedData = arrData.slice(start, end);//bota turgan page 10 ta element ovolamz masalan manda 5 ta
         let coun = 0;
-        paginatedData.forEach((elm)=>{ 
+        paginatedData.forEach((elm:any)=>{ //uwatdg elementlan aylanb cqamz
             coun++;
-            count_movie.innerHTML = coun
+            count_movie.innerHTML = `${coun}`
             let ParentElement = document.createElement("tr");
             ParentElement.classList.add("tr");
 
@@ -50,7 +50,7 @@ async function Main(){
             postsElm.append(ParentElement);
         });
     }
-    function DisplayPagination(arrData , rowPerPage){ 
+    function DisplayPagination(arrData:any , rowPerPage:any){ 
         const paginationElm = document.querySelector(".pagination");
         const pagesCount = Math.ceil(arrData.length / rowPerPage);
         const li = document.createElement('li');
@@ -61,7 +61,7 @@ async function Main(){
         }
         paginationElm.append(li)
     }
-    function DisplayPaginationBtn(page){ 
+    function DisplayPaginationBtn(page:any){ 
         const a = document.createElement("a");
         a.classList.add("page-link")
         a.innerHTML = page;

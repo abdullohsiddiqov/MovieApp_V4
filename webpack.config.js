@@ -36,7 +36,7 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
-    port: 3000,
+    port: 3001,
     client: {
       logging: 'none'
     }
