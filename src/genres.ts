@@ -13,24 +13,26 @@ export async function createGenres() {
     d.menu_items.append(li);
     li.addEventListener('click', () => {
       li.style.background = 'blue';
-      const prevously = document.querySelector('.list-group-item.active') as HTMLLIElement;
-      if (prevously) {
-        prevously.style.backgroundColor = 'white';
+      const previously = document.querySelector('.list-group-item.active') as HTMLLIElement;
+      if (previously) {
+        previously.style.backgroundColor = 'white';
       }
       li.classList.add('active');
-      if (prevously) {
-        prevously.classList.remove('active');
+      if (previously) {
+        previously.classList.remove('active');
       }
       var coun = 0;
       d.tbody.innerHTML = '';
       for (let i = 0; i < movies.length; i++) {
         if (li.textContent === movies[i].genre.name) {
           coun++;
+
           const tr = document.createElement('tr');
           const tdTitle = document.createElement('td');
           const tdGenre = document.createElement('td');
           const tdStoke = document.createElement('td');
           const tdRate = document.createElement('td');
+
           tdTitle.textContent = ` ${movies[i].title}`;
           tdGenre.innerText = `${movies[i].genre.name}`;
           tdStoke.textContent = `${movies[i].numberInStock}`;
@@ -38,15 +40,6 @@ export async function createGenres() {
           tr.append(tdTitle, tdGenre, tdStoke, tdRate);
 
           d.tbody.appendChild(tr);
-
-          // tr.onclick = () => {
-          //   c.main.innerHTML = '';
-          //   c.nav.innerHTML = '';
-          //   c.inputs.style.display = 'flex';
-          //   c.movieTitle.value = `${tdTitle.textContent}`;
-          //   c.movieGenre.value = `${tdGenre.textContent}`;
-          //   c.movieStoke.value = `${tdStoke.textContent}`;
-          // };
         }
       }
     });

@@ -52,7 +52,7 @@ async function Main(){
     }
     function DisplayPagination(arrData:any , rowPerPage:any){ 
         const paginationElm = document.querySelector(".pagination");
-        const pagesCount = Math.ceil(arrData.length / rowPerPage);
+        const pagesCount = arrData.length / rowPerPage;
         const li = document.createElement('li');
         li.classList.add("page-item");
         for(let i = 0; i < pagesCount; i++){ 

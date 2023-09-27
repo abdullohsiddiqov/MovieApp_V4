@@ -33,20 +33,25 @@ const inpLogEmail: HTMLInputElement = document.querySelector('.logEmail');
 const inpLogPassword: HTMLInputElement = document.querySelector('.logPassword');
 export async function logIn() {
   const token = await s.Auth.Login({
-    email: inpLogEmail.value,
-    password: inpLogPassword.value
+    email:`${inpLogEmail.value}`,
+    password: `${inpLogPassword.value}`
   });
-  console.log(inpLogEmail.value)
+  c.login.style.display = 'none';
+  c.navbar.style.display = 'block';
+  c.main.style.display = 'block';
+  c.registerBtn.innerText = 'Logout';
+  localStorage.setItem(tokenKey, token);
+  if (localStorage.getItem(tokenKey) != null) {
+    console.log('token : ', localStorage.getItem(tokenKey));
+  }
+  const user = await s.Auth.Me(token);
+  console.log('user : ', user);
 
   c.login.style.display = 'none';
   c.navbar.style.display = 'block';
   c.main.style.display = 'block';
   c.registerBtn.innerText = 'Logout';
-  c.loginBtn.innerText = `${c.inpRegUserName.value}`;
-  localStorage.setItem(tokenKey,token);
-  if(localStorage.getItem(tokenKey) != null){ 
-    console.log(localStorage.getItem(tokenKey))
-  }
+  c.loginBtn.innerText = `${user.name}`;
 }
 
 c.submit.addEventListener('click', submit);
