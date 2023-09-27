@@ -95,24 +95,6 @@ body {
   justify-content: space-between;
 }
 
-.nav-container .hamburger-lines .line {
-  display: block;
-  height: 4px;
-  width: 100%;
-  border-radius: 10px;
-  background: #0e2431;
-}
-
-.nav-container .hamburger-lines .line1 {
-  transform-origin: 0% 0%;
-  transition: transform 0.4s ease-in-out;
-}
-
-.nav-container .hamburger-lines .line2 {
-  transition: transform 0.2s ease-in-out;
-}
-
-
 .activee{ 
   background-color: blue;
   color: white;
@@ -149,4 +131,7 @@ body {
 }
 .pagination{ 
   cursor: pointer;
+}
+.logout{ 
+  display: none;
 }

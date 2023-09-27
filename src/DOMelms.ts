@@ -1,6 +1,7 @@
 export const menu_items = document.querySelector('.menu-items') as HTMLElement;
 export const tbody: HTMLTableElement = document.querySelector('.tbody');
 // export const tbody: HTMLTableElement = document.querySelector("#tbody");
+export const logout = document.querySelector('.logout') as HTMLElement;
 export const counterMovies: HTMLSpanElement =document.querySelector(".count-movie");
 export const input: HTMLInputElement = document.querySelector(".form-control");
 export const select: NodeListOf<HTMLUListElement> =document.querySelectorAll(".list-group-item");
